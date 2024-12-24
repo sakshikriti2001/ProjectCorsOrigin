@@ -13,6 +13,6 @@ public class WebConfig implements WebMvcConfigurer {
         corsRegistry.addMapping("/**")
                 .allowedHeaders("*")
                 .allowedMethods("GET", "PUT", "POST", "DELETE")
-                .allowedOrigins("http://localhost:5500");
+                .allowedOrigins("http://localhost:5060/index.html");
     }
 }
