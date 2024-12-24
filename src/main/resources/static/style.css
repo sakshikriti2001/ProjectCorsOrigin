@@ -1,0 +1,11 @@
+// script.js
+document.getElementById('fetchMessage').addEventListener('click', function() {
+    fetch('http://localhost:8080/api/hello')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('message').innerText = data;
+        })
+        .catch(error => {
+            document.getElementById('message').innerText = 'Error: ' + error.message;
+        });
+});
